@@ -1,0 +1,27 @@
+version: "3"
+services:
+    app-waterss-asp:
+      image: harbor.jiangxingai.com/library/app-w2s-asp/x8664/others:3.1.8rc
+      environment:
+        PYTHONIOENCODING: utf-8
+        #MQTT_BROKER_ADDR: "10.55.1.32"
+        MQTT_BROKER_PORT: "1883"
+        EXTERNAL_PORT: "30003"
+        FLV_PORT: "8090" #用于对接nstream使用http flv格式输出流
+        DEVICE_TYPE: "ZL203"
+        HIK_SUBTYPE: "main" # main主码流, sub子码流
+
+      container_name: app-waterss-asp
+      hostname: app-waterss-gov-cluster
+      restart: always
+      privileged: true
+      ports:
+        - "30003:80"
+      volumes:
+        - /data/tmpfs:/data/tmpfs
+        - /data/local/w2s:/var/w2s
+        - /etc/hostname:/etc/hostname
+        - /etc/asp:/etc/asp
+        - /etc/timezone:/etc/timezone
+        - /etc/localtime:/etc/localtime
+        - /data/webConfig/w2s:/data/webConfig/w2s

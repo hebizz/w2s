@@ -1,0 +1,6 @@
+export PYTHONIOENCODING="utf-8"
+export MQTT_BROKER_ADDR="119.29.189.72"
+export MQTT_BROKER_PORT="1883"
+export EXTERNAL_PORT="30003"
+nginx
+python3 run.py

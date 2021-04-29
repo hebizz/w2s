@@ -1,0 +1,47 @@
+p, admin, /*, (GET)|(POST)|(PUT)|(DELETE), allow
+
+p, visitor, /, (GET)|(POST)|(PUT)|(DELETE), allow
+p, visitor, /api/v1/login, (GET)|(POST)|(PUT), allow
+
+
+p, viewer, /api/v1/healthy, (GET)|(POST)|(PUT)|(DELETE), allow
+p, viewer, /api/v1/login, (POST), allow
+p, viewer, /api/v1/logout, (POST), allow
+
+p, viewer, /api/v1/user, (GET)|(PUT), allow
+p, viewer, /api/v1/admin/user, (GET), allow
+p, viewer, /api/v1/overview, (GET), allow
+p, viewer, /api/v1/overview/location, (GET), allow
+p, viewer, /api/v1/alerts, (GET)|(PUT), allow
+
+p, viewer, /api/v1/alerts/summary, (GET), allow
+p, viewer, /api/v1/alerts/summary/status, (GET), allow
+p, viewer, /api/v1/alerts/summary/category, (GET), allow
+p, viewer, /api/v1/alerts/management, (GET), allow
+p, viewer, /api/v1/alerts/excel, (GET), allow
+p, viewer, /api/v1/alerts/refresh, (GET), allow
+p, viewer, /api/v1/devices/summary, (GET), allow
+p, viewer, /api/v1/devices/image, (GET), allow
+p, viewer, /api/v1/function, (GET), allow
+p, viewer, /api/v1/function/camera, (GET), allow
+p, viewer, /api/v1/camera, (GET)|(PUT)|(DELETE), allow
+
+p, operator, /api/v1/healthy, (GET)|(POST)|(PUT)|(DELETE), allow
+p, operator, /api/v1/login, (GET)|(POST)|(PUT)|(DELETE), allow
+p, operator, /api/v1/logout, (GET)|(POST)|(PUT)|(DELETE), allow
+p, operator, /api/v1/user, (GET)|(PUT), allow
+p, operator, /api/v1/admin/user, (GET), allow
+p, operator, /api/v1/overview, (GET)|(POST)|(PUT)|(DELETE), allow
+p, operator, /api/v1/overview/location, (GET)|(POST)|(PUT)|(DELETE), allow
+p, operator, /api/v1/alerts, (GET)|(POST)|(PUT)|(DELETE), allow
+p, operator, /api/v1/alerts/summary, (GET)|(POST)|(PUT)|(DELETE), allow
+p, operator, /api/v1/alerts/summary/status, (GET)|(POST)|(PUT)|(DELETE), allow
+p, operator, /api/v1/alerts/summary/category, (GET)|(POST)|(PUT)|(DELETE), allow
+p, operator, /api/v1/alerts/management, (GET)|(POST)|(PUT)|(DELETE), allow
+p, operator, /api/v1/alerts/excel, (GET)|(POST)|(PUT)|(DELETE), allow
+p, operator, /api/v1/alerts/refresh, (GET), allow
+p, operator, /api/v1/devices/summary, (GET)|(POST)|(PUT)|(DELETE), allow
+p, operator, /api/v1/devices/image, (GET)|(POST)|(PUT)|(DELETE), allow
+p, operator, /api/v1/function, (GET)|(POST)|(PUT), allow
+p, operator, /api/v1/function/camera, (GET)|(PUT)|(POST), allow
+p, operator, /api/v1/camera, (GET)|(PUT)|(POST)|(DELETE), allow

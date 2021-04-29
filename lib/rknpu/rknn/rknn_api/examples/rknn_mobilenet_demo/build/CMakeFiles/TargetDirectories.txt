@@ -1,0 +1,7 @@
+/home/michael/project/rv1126/RK_SDK_rv1126_rv1109_linux_v1.3.0_20200921/rv1126_rv1109/external/rknpu/rknn/rknn_api/examples/rknn_mobilenet_demo/build/CMakeFiles/install.dir
+/home/michael/project/rv1126/RK_SDK_rv1126_rv1109_linux_v1.3.0_20200921/rv1126_rv1109/external/rknpu/rknn/rknn_api/examples/rknn_mobilenet_demo/build/CMakeFiles/list_install_components.dir
+/home/michael/project/rv1126/RK_SDK_rv1126_rv1109_linux_v1.3.0_20200921/rv1126_rv1109/external/rknpu/rknn/rknn_api/examples/rknn_mobilenet_demo/build/CMakeFiles/rebuild_cache.dir
+/home/michael/project/rv1126/RK_SDK_rv1126_rv1109_linux_v1.3.0_20200921/rv1126_rv1109/external/rknpu/rknn/rknn_api/examples/rknn_mobilenet_demo/build/CMakeFiles/install/strip.dir
+/home/michael/project/rv1126/RK_SDK_rv1126_rv1109_linux_v1.3.0_20200921/rv1126_rv1109/external/rknpu/rknn/rknn_api/examples/rknn_mobilenet_demo/build/CMakeFiles/install/local.dir
+/home/michael/project/rv1126/RK_SDK_rv1126_rv1109_linux_v1.3.0_20200921/rv1126_rv1109/external/rknpu/rknn/rknn_api/examples/rknn_mobilenet_demo/build/CMakeFiles/tcore_rv.dir
+/home/michael/project/rv1126/RK_SDK_rv1126_rv1109_linux_v1.3.0_20200921/rv1126_rv1109/external/rknpu/rknn/rknn_api/examples/rknn_mobilenet_demo/build/CMakeFiles/edit_cache.dir

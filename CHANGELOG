@@ -1,0 +1,70 @@
+Version: 3.2.7
+Date: Jan 28, 2021
+---------------------
+1. fix bug for alert aggregate
+2. fix bug for detect picture valid
+3. fix bug for upload frequency
+
+
+Version: 3.2.6
+Date: Jan 26, 2021
+---------------------
+1. update upload policy
+2. update hk rtsp sub type
+
+
+
+Version: 3.2.4
+Date: Jan 21, 2021
+---------------------
+1. support td201/td202
+2. update chip_pointer policy from webconfig
+3. fix storage bug
+
+
+
+
+
+Version: 3.1.1
+Date: Jan 6, 2021
+---------------------
+1. bug fix, path split when report image del
+2. bug fix, disk usage caculate for specific path, use 'du -sh'
+3. improve Makefile
+
+Version: 3.1.0
+Date: Jan 4, 2021
+---------------------
+1. update camery history storage policy
+2. update alert image storage policy
+3. asp image upload type via mqtt: local/base64
+4. fix bug for asp snap
+5. fix bug for mqtt block and then offline
+6. fix bug for mqtt disconnect
+7. add plc controller device, only support x86
+8. Add Jenkins Robot
+9. Update Makefile to support x86/arm64/arm32v7
+10. Add run_bare.sh for running barely
+
+
+Version: 3.0.1
+Date: Dec 18, 2020
+---------------------
+1. Merged
+
+
+
+Version: 2.3.2
+Date: Nov 17, 2020
+---------------------
+1. Support threshold adjustment
+2. Support detection_cycle adjustment
+3. Support setting the number of alerts in monitoring period
+
+
+
+Version: 1.0.0
+Date: Jul 06, 2020
+---------------------
+1. Support cluster mode and single mode recognition
+2. Support HikVision SDK on X86 machine

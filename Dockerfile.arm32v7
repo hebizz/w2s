@@ -1,0 +1,26 @@
+FROM ubuntu:18.04
+
+ENV DEBIAN_FRONTEND noninteractive
+RUN apt-get update && apt-get install -y python3 python3-pip python3-numpy nginx vim python3-opencv python3-pil
+RUN apt-get -y install libtiff5-dev libjpeg8-dev zlib1g-dev libfreetype6-dev ffmpeg
+
+COPY asp /etc/asp
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY build_main /usr/share/nginx/html
+#COPY lib/rknpu/rknn/rknn_api/librknn_api/lib/librknn_api.so /usr/lib/librknn_api.so
+#COPY lib/rknpu/rknn/rknn_api/librknn_api/include/rknn_api.h /usr/include/rknn_api.h
+#COPY lib/rknpu/drivers/linux-armhf-puma/usr/lib /usr/lib
+COPY requirements /app/requirements
+COPY requirements.txt /app/requirements.txt
+COPY font_wqhei.ttf /app/font_wqhei.ttf
+
+WORKDIR app
+RUN pip3 install -r requirements.txt
+
+COPY backend /app/backend
+COPY VERSION /app/VERSION
+COPY run.py /app/run.py
+COPY run.sh /app/run.sh
+
+CMD ["bash", "run.sh"]
+

@@ -1,0 +1,3 @@
+[registry."harbor.jiangxingai.com"]
+  http = true
+  insecure = true

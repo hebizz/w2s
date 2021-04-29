@@ -1,0 +1,72 @@
+worker_node:
+    service_name: app-waterss-asp-e200460
+    portname: port15056
+    arch: ["arm64v8"]
+    engine: "docker-compose"
+    yaml:
+        version: "3"
+        services:
+            app-waterss-asp-e200460:
+            image: harbor.jiangxingai.com/library/app-waterss-asp-e200460/x8664/others:1.0.1
+            environment:
+                PYTHONIOENCODING: utf-8
+                MQTT_BROKER_ADDR: "10.55.1.32"
+                MQTT_BROKER_PORT: "1883"
+                EXTERNAL_PORT: "30003"
+
+            container_name: app-waterss-asp-e200460
+            hostname: app-waterss-asp-e200460
+            restart: always
+            privileged: true
+            ports:
+                - "30003:80"
+            volumes:
+                - /data:/data
+                - /etc/hostname:/etc/hostname
+                - /etc/asp:/etc/asp
+                - /etc/timezone:/etc/timezone
+                - /etc/localtime:/etc/localtime
+
+
+master_node:
+    service_name: app-waterss-asp-e200460
+    portname: port15056
+    arch: ["x8664"]
+    engine: "k8s"
+    yaml:
+        service:
+            kind: Service
+            apiVersion: v1
+            metadata:
+              name: app-waterss-asp-e200460
+            spec:
+              selector:
+                app: app-waterss-asp-e200460
+              ports:
+              - protocol: TCP
+                port: 8000
+                targetPort: 8000
+        deployment:
+            apiVersion: apps/v1beta1
+            kind: Deployment
+            metadata:
+              name: app-waterss-asp-e200460
+            spec:
+              template:
+                metadata:
+                  labels:
+                    app: app-waterss-asp-e200460
+                spec:
+
+                  containers:
+                  - name: app-waterss-asp-e200460
+                    image: cloud-app-proxy:0.0.4
+
+                    ports:
+                    - containerPort: 8000
+                    env:
+                      - name: NODE_ID
+                        value: J00e759884
+                      - name: SERVICE_NAME
+                        value: app-waterss-asp-e200460
+
